@@ -1,0 +1,12 @@
+{
+  "name": "TS-project",
+  "version": "1.0.0",
+  "description": "Typescript Project",
+  "main": "index.js",
+  "author": "Andres Rueda",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.1"
+  }
+}

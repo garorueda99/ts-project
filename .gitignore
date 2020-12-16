@@ -1,0 +1,10 @@
+# Windows
+Thumbs.db
+desktop.ini
+
+# OS X
+.DS_Store
+.Trashes
+._*
+
+node_modules/
