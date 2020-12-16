@@ -5,7 +5,10 @@
   "main": "index.js",
   "author": "Andres Rueda",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "@types/faker": "^5.1.5",
+    "faker": "^5.1.0"
+  },
   "devDependencies": {
     "parcel": "^2.0.0-beta.1"
   }
