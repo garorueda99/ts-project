@@ -6,5 +6,7 @@ desktop.ini
 .DS_Store
 .Trashes
 ._*
-
+/.parcel*
 node_modules/
+/node_modules
+.parcel*
