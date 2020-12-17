@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @Types/faker
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add ts-dotenv
 
 PATH: 
   C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\Autodesk Shared\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby2.3.3\bin;C:\Ruby25-x64\bin;C:\Users\engineering\.windows-build-tools\python27\;C:\Users\engineering\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\engineering\AppData\Local\GitHubDesktop\bin;C:\Program Files\Docker Toolbox;C:\Users\engineering\AppData\Roaming\npm;C:\Users\engineering\AppData\Local\Yarn\bin
@@ -14,17 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@Types%2ffaker: Not found
-      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66096:18)
-      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140748:22)
-      at Request.emit (events.js:311:20)
-      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141720:10)
-      at Request.emit (events.js:311:20)
-      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141642:12)
-      at Object.onceWrapper (events.js:417:28)
-      at IncomingMessage.emit (events.js:323:22)
-      at endReadableNT (_stream_readable.js:1204:12)
-      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+  Error: EPERM: operation not permitted, lstat 'C:\Coding\TS-project\node_modules\.bin'
 
 npm manifest: 
   {
@@ -35,6 +25,7 @@ npm manifest:
     "author": "Andres Rueda",
     "license": "MIT",
     "dependencies": {
+      "@types/faker": "^5.1.5",
       "faker": "^5.1.0"
     },
     "devDependencies": {
@@ -1736,6 +1727,11 @@ Lockfile:
       "@parcel/utils" "2.0.0-beta.1"
       chrome-trace-event "^1.0.2"
       nullthrows "^1.1.1"
+  
+  "@types/faker@^5.1.5":
+    version "5.1.5"
+    resolved "https://registry.yarnpkg.com/@types/faker/-/faker-5.1.5.tgz#f14b015e0100232bb00c6dd7611505efb08709a0"
+    integrity sha512-2uEQFb7bsx68rqD4F8q95wZq6LTLOyexjv6BnvJogCO4jStkyc6IDEkODPQcWfovI6g6M3uPQ2/uD/oedJKkNw==
   
   "@types/q@^1.5.1":
     version "1.5.4"

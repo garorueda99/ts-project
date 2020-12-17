@@ -412,9 +412,13 @@ function hmrAcceptRun(bundle, id) {
 
 var _User = require("./User");
 
+var _Company = require("./Company");
+
 const user = new _User.User();
-console.log("hello World of TS!", user);
-},{"./User":"5c5b319dab638520bcc257fa8347c7d1"}],"5c5b319dab638520bcc257fa8347c7d1":[function(require,module,exports) {
+const company = new _Company.Company();
+console.log("hello World of TS!", user, company);
+new google.maps.Map(document.getElementById("map"));
+},{"./User":"5c5b319dab638520bcc257fa8347c7d1","./Company":"466b1f13b8dbee287f4353cd033807a3"}],"5c5b319dab638520bcc257fa8347c7d1":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -428,7 +432,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 class User {
   constructor() {
-    this.name = _faker.default.company.companyName();
+    this.name = _faker.default.name.firstName() + " " + _faker.default.name.lastName();
     this.location = {
       lat: parseFloat(_faker.default.address.latitude()),
       lng: parseFloat(_faker.default.address.longitude())
@@ -100732,6 +100736,32 @@ module["exports"] = [
   "09##-######"
 ];
 
-},{}]},{},["ab6960603f3d698adf97b6a6f9392367","7843b3960e086726267ff606847fc92b"], null)
+},{}],"466b1f13b8dbee287f4353cd033807a3":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Company = void 0;
+
+var _faker = _interopRequireDefault(require("faker"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class Company {
+  constructor() {
+    this.companyName = _faker.default.company.companyName();
+    this.catchPhrase = _faker.default.company.catchPhrase();
+    this.location = {
+      lat: parseFloat(_faker.default.address.latitude()),
+      lng: parseFloat(_faker.default.address.longitude())
+    }; // this.location.lat = parse faker.address.latitude(); 
+    //initialization
+  }
+
+}
+
+exports.Company = Company;
+},{"faker":"0021d18d7599be4aaa9bee4414df31e9"}]},{},["ab6960603f3d698adf97b6a6f9392367","7843b3960e086726267ff606847fc92b"], null)
 
 //# sourceMappingURL=TS-project.0992847c.js.map
