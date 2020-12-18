@@ -418,7 +418,9 @@ var _Map = require("./Map");
 
 const user = new _User.User();
 const company = new _Company.Company();
-new _Map.Map("map");
+const customMap = new _Map.Map("map");
+customMap.addMarker(user);
+customMap.addMarker(company);
 console.log("hello World of TS!", user, company);
 },{"./User":"5c5b319dab638520bcc257fa8347c7d1","./Company":"466b1f13b8dbee287f4353cd033807a3","./Map":"4f427d6d74257cd7c4161267e27a547a"}],"5c5b319dab638520bcc257fa8347c7d1":[function(require,module,exports) {
 "use strict";
@@ -100772,6 +100774,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Map = void 0;
 
+// import {User} from "./User"
+// import {Company} from "./Company"
 class Map {
   constructor(didID) {
     this.googleMap = new google.maps.Map(document.getElementById(didID), {
