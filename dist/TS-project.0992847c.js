@@ -414,11 +414,13 @@ var _User = require("./User");
 
 var _Company = require("./Company");
 
+var _Map = require("./Map");
+
 const user = new _User.User();
 const company = new _Company.Company();
+new _Map.Map("map");
 console.log("hello World of TS!", user, company);
-new google.maps.Map(document.getElementById("map"));
-},{"./User":"5c5b319dab638520bcc257fa8347c7d1","./Company":"466b1f13b8dbee287f4353cd033807a3"}],"5c5b319dab638520bcc257fa8347c7d1":[function(require,module,exports) {
+},{"./User":"5c5b319dab638520bcc257fa8347c7d1","./Company":"466b1f13b8dbee287f4353cd033807a3","./Map":"4f427d6d74257cd7c4161267e27a547a"}],"5c5b319dab638520bcc257fa8347c7d1":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -100762,6 +100764,38 @@ class Company {
 }
 
 exports.Company = Company;
-},{"faker":"0021d18d7599be4aaa9bee4414df31e9"}]},{},["ab6960603f3d698adf97b6a6f9392367","7843b3960e086726267ff606847fc92b"], null)
+},{"faker":"0021d18d7599be4aaa9bee4414df31e9"}],"4f427d6d74257cd7c4161267e27a547a":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Map = void 0;
+
+class Map {
+  constructor(didID) {
+    this.googleMap = new google.maps.Map(document.getElementById(didID), {
+      zoom: 1,
+      center: {
+        lat: 0,
+        lng: 0
+      }
+    });
+  }
+
+  addMarker(mappable) {
+    new google.maps.Marker({
+      map: this.googleMap,
+      position: {
+        lat: mappable.location.lat,
+        lng: mappable.location.lng
+      }
+    });
+  }
+
+}
+
+exports.Map = Map;
+},{}]},{},["ab6960603f3d698adf97b6a6f9392367","7843b3960e086726267ff606847fc92b"], null)
 
 //# sourceMappingURL=TS-project.0992847c.js.map
