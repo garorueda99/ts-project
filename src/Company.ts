@@ -16,5 +16,12 @@ export class Company {
         }
         // this.location.lat = parse faker.address.latitude(); 
         //initialization
+        
+    }
+    markerContent(): string{
+     return `
+     <h2>Company name: ${this.companyName}</h2>
+     <h3>Catchphrase: ${this.catchPhrase}<h3>
+     `       
     }
 }

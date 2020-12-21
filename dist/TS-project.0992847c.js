@@ -444,6 +444,10 @@ class User {
     //initialization
   }
 
+  markerContent() {
+    return `User name: ${this.name}`;
+  }
+
 }
 
 exports.User = User;
@@ -100763,6 +100767,13 @@ class Company {
     //initialization
   }
 
+  markerContent() {
+    return `
+     <h2>Company name: ${this.companyName}</h2>
+     <h3>Catchphrase: ${this.catchPhrase}<h3>
+     `;
+  }
+
 }
 
 exports.Company = Company;
@@ -100788,12 +100799,18 @@ class Map {
   }
 
   addMarker(mappable) {
-    new google.maps.Marker({
+    const marker = new google.maps.Marker({
       map: this.googleMap,
       position: {
         lat: mappable.location.lat,
         lng: mappable.location.lng
       }
+    });
+    const infoWindow = new google.maps.InfoWindow({
+      content: mappable.markerContent()
+    });
+    marker.addListener("click", () => {
+      infoWindow.open(this.googleMap, marker);
     });
   }
 
